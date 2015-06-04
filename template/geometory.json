@@ -15,44 +15,23 @@
 	
 	"FaceVertex":
 	{
-		"comment": "面クラス",
-		"variables":
-		{
-			"operator[]":
-			{
-				"type": "int",
-				"size": 3,
-				"comment": "頂点のリスト，三角形固定"
-			}
-		}
+		"comment": "三角形の頂点リスト",
+		"extends": "FixedArrayList",
+		"parameters": ["int", 3]
 	},
 	
 	"FaceNormal":
 	{
 		"comment": "面法線クラス，面の頂点ごとに法線を持つ",
-		"variables":
-		{
-			"operator[]":
-			{
-				"type": "Vector3",
-				"size": 3,
-				"comment": "面法線のリスト"
-			}
-		}
+		"extends": "FixedArrayList",
+		"parameters": ["float", 3]
 	},
 	
 	"FaceUV":
 	{
 		"comment": "面UVクラス，面の頂点ごとにUVを持つ",
-		"variables":
-		{
-			"operator[]":
-			{
-				"type": "Vector2",
-				"size": 3,
-				"comment": "面UVのリスト"
-			}
-		} 
+		"extends": "FixedArrayList",
+		"parameters": ["float", 3]
 	},
 	
 	"Face":
@@ -81,10 +60,7 @@
 	"FaceList":
 	{
 		"comment": "面リスト",
-		"extend": "ArrayList",
-		"template":
-		{
-			"typename": "Face"
-		}
+		"extends": "ArrayList",
+		"parameters": ["Face"]
 	}
 }

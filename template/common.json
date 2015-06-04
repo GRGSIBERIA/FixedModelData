@@ -33,5 +33,39 @@
 				"type": "float"
 			}
 		}
+	},
+	
+	"ArrayList":
+	{
+		"comment": "配列要素クラス",
+		"template":
+		{
+			"typename": "T"
+		},
+		"variables":
+		{
+			"elements":
+			{
+				"type": "T"
+			}
+		}
+	},
+	
+	"FixedArrayList":
+	{
+		"comment": "固定長配列要素クラス",
+		"template":
+		{
+			"typename": "T",
+			"int": "NUM"
+		},
+		"variables":
+		{
+			"elements":
+			{
+				"type": "T",
+				"size": "NUM"
+			}
+		}
 	}
 }
