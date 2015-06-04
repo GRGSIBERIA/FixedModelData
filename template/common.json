@@ -1,0 +1,37 @@
+{
+	"Vector3":
+	{
+		"comment": "3次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "float"
+			},
+			"y":
+			{
+				"type": "float"
+			},
+			"z":
+			{
+				"type": "float"
+			}
+		}
+	},
+	
+	"Vector2":
+	{
+		"comment": "2次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "float"
+			},
+			"y":
+			{
+				"type": "float"
+			}
+		}
+	}
+}
