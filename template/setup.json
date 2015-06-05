@@ -1,0 +1,88 @@
+{
+	"LocalAxis":
+	{
+		"comment": "ボーンのローカル軸を表す",
+		"notice": "Z手前，X右，Y上",
+		"variables":
+		{
+			"boneId":
+			{
+				"type": "int",
+				"comment": "ローカル軸のあるボーンID"
+			},
+			"AxisX":
+			{
+				"type": "Vector3",
+				"comment": "X軸の向き"
+			},
+			"AxisZ":
+			{
+				"type": "Vector3",
+				"comment": "Z軸の向き"
+			}
+		}
+	},
+	
+	"LocalAxisList":
+	{
+		"comment": "ローカル軸のリスト",
+		"extends": "ArrayList",
+		"parameters": ["LocalAxis"]
+	},
+	
+	"ConstraintBase":
+	{
+		"comment": "拘束のベースクラス，sourceがtargetに対して拘束する",
+		"variables":
+		{
+			"sourceBoneId":
+			{
+				"type": "int",
+				"comment": "拘束するボーンのID"
+			},
+			"targetBoneId":
+			{
+				"type": "int",
+				"comment": "拘束されるボーンのID"
+			},
+			"ratio":
+			{
+				"type": "float",
+				"comment": "拘束をかける割合"
+			}
+		}
+	},
+	
+	"PointConstraint":
+	{
+		"comment": "位置の拘束をする",
+		"extends": "ConstraintBase"
+	},
+	
+	"OrientConstraint":
+	{
+		"comment": "回転の拘束をする",
+		"extends": "ConstraintBase"
+	},
+	
+	"ParentConstraint":
+	{
+		"comment": "位置と回転の拘束をする",
+		"extends": "ConstraintBase"
+	},
+	
+	"AimConstraint":
+	{
+		"comment": "対象物へ向くように拘束をする",
+		"extends": "ConstraintBase",
+		"variables":
+		{
+			"aimAxis":
+			{
+				"type": "enum",
+				"comment": "どの軸が対象物に注視するか",
+				"enum": ["X", "Y", "Z"]
+			}
+		}
+	}
+}
