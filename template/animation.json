@@ -3,7 +3,7 @@
 	{
 		"variables":
 		{
-			"boneName":
+			"name":
 			{
 				"type": "FixedArrayList",
 				"parameters": ["char", 40],
@@ -14,7 +14,7 @@
 			{
 				"type": "Vector3",
 				"comment": "ボーンの位置",
-				"notice": "Z手前，X右，Y上"
+				"notice": "Z手前，X右，Y上，メートル法"
 			},
 			"parentId":
 			{
@@ -63,6 +63,14 @@
 	{
 		"comment": "頂点に対するボーンのウェイト値を格納する，サイズ頂点数と同じ",
 		"extends": "ArrayList",
-		"parameters": ["WeightList"]
+		"parameters": ["WeightList"],
+		"variables":
+		{
+			"numberOfInfluences":
+			{
+				"type": "int",
+				"comment": "影響ボーン数，全て同じ数になる"
+			}
+		}
 	}
 }

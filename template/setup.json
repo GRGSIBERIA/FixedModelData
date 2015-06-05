@@ -30,7 +30,40 @@
 		"parameters": ["LocalAxis"]
 	},
 	
-	"ConstraintBase":
+	"Limit":
+	{
+		"comment": "ボーンの動作制限",
+		"variables":
+		{
+			"limitType":
+			{
+				"type": "enum",
+				"comment": "制限の種類",
+				"enum": ["Position", "Rotation", "Scale"]
+			},
+			"maxLimit":
+			{
+				"type": "Vector3",
+				"comment": "最大の制限値，limitTypeによって意味は変わる",
+				"notice": "Z手前，X右，Y上，メートル法"
+			},
+			"minLimit":
+			{
+				"type": "Vector3",
+				"comment": "最小の制限値，limitTypeによって意味は変わる",
+				"notice": "Z手前，X右，Y上，メートル法"
+			}
+		}
+	},
+	
+	"LimitList":
+	{
+		"comment": "制限のリスト",
+		"extends": "ArrayList",
+		"parameters": ["Limit"]
+	},
+	
+	"Constraint":
 	{
 		"comment": "拘束のベースクラス，sourceがtargetに対して拘束する",
 		"variables":
@@ -49,40 +82,59 @@
 			{
 				"type": "float",
 				"comment": "拘束をかける割合"
-			}
-		}
-	},
-	
-	"PointConstraint":
-	{
-		"comment": "位置の拘束をする",
-		"extends": "ConstraintBase"
-	},
-	
-	"OrientConstraint":
-	{
-		"comment": "回転の拘束をする",
-		"extends": "ConstraintBase"
-	},
-	
-	"ParentConstraint":
-	{
-		"comment": "位置と回転の拘束をする",
-		"extends": "ConstraintBase"
-	},
-	
-	"AimConstraint":
-	{
-		"comment": "対象物へ向くように拘束をする",
-		"extends": "ConstraintBase",
-		"variables":
-		{
-			"aimAxis":
+			},
+			"constraintType":
 			{
 				"type": "enum",
-				"comment": "どの軸が対象物に注視するか",
-				"enum": ["X", "Y", "Z"]
+				"comment": "拘束の種類",
+				"enum":
+				[
+					"Point", "Orient", "Parent", "AimX", "AimY", "AimZ"
+				]
 			}
 		}
+	},
+	
+	"ConstraintList":
+	{
+		"comment": "拘束のリスト",
+		"extends": "ArrayList",
+		"parameters": ["Constraint"]
+	},
+	
+	"IK":
+	{
+		"comment": "IK",
+		"variables":
+		{
+			"rootBoneId":
+			{
+				"type": "int",
+				"comment": "IKの根本のボーンID"
+			},
+			"tailBoneId":
+			{
+				"type": "int",
+				"comment": "IKの末端のボーンID"
+			},
+			"iteration":
+			{
+				"type": "int",
+				"comment": "計算回数"
+			},
+			"rotateLimitation":
+			{
+				"type": "float",
+				"comment": "1フレームあたりに回転可能な角度",
+				"notice": "ラジアン角, 30FPS換算"
+			}
+		}
+	},
+	
+	"IKList":
+	{
+		"comment": "IKのリスト",
+		"extends": "ArrayList",
+		"parameters": ["IK"]
 	}
 }

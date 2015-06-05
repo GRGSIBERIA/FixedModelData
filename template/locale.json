@@ -6,9 +6,10 @@
 		{
 			"name":
 			{
-				"type": "string",
+				"type": "ArrayList",
 				"comment": "対象の訳",
-				"notice": "UTF-8"
+				"notice": "UTF-8",
+				"parameters": ["wchar_t"]
 			}
 		}
 	},
@@ -25,7 +26,7 @@
 				"comment": "訳の種類",
 				"enum":
 				[
-					"Material", "Bone", "RigidBody", "Joint"
+					"Material", "Bone", "Morph", "RigidBody", "Joint"
 				]
 			},
 			"language":

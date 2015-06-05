@@ -4,6 +4,30 @@
 		"comment": "チャンクのベースクラス，extends指定がなければデフォルトでこれを継承"
 	},
 	
+	"Vector4":
+	{
+		"comment": "4次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "float"
+			},
+			"y":
+			{
+				"type": "float"
+			},
+			"z":
+			{
+				"type": "float"
+			},
+			"w":
+			{
+				"type": "float"
+			}
+		}
+	},
+	
 	"Vector3":
 	{
 		"comment": "3次元のベクトルクラス",
@@ -44,33 +68,34 @@
 	{
 		"comment": "配列要素クラス",
 		"template":
-		{
-			"typename": "T"
-		},
-		"variables":
-		{
-			"elements":
+		[
 			{
-				"type": "T"
+				"type": "typename",
+				"name": "T"
 			}
-		}
+		]
 	},
 	
 	"FixedArrayList":
 	{
 		"comment": "固定長配列要素クラス",
 		"template":
-		{
-			"typename": "T",
-			"int": "NUM"
-		},
-		"variables":
-		{
-			"elements":
+		[
 			{
-				"type": "T",
-				"size": "NUM"
+				"type": "typename",
+				"name": "T"
+			},
+			{
+				"type": "int",
+				"name": "NUM"
 			}
-		}
+		]
+	},
+	
+	"WString":
+	{
+		"comment": "UTF-8文字列",
+		"extends": "ArrayList",
+		"parameters": ["wchar_t"]
 	}
 }

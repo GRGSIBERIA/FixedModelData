@@ -1,0 +1,38 @@
+{
+	"MorphOffset":
+	{
+		"comment": "モーフの移動量を表す",
+		"variables":
+		{
+			"vertexId":
+			{
+				"type": "int",
+				"comment": "対象の頂点ID"
+			},
+			
+			"offset":
+			{
+				"type": "Vector3",
+				"comment": "移動量",
+				"notice": "Z手前，X右，Y上，メートル法"
+			}
+		}
+	},
+	
+	"Morph":
+	{
+		"comment": "モーフ",
+		"extends": "ArrayList",
+		"parameters": ["MorphOffset"],
+		"variables":
+		{
+			"name":
+			{
+				"type": "FixedArrayList",
+				"comment": "モーフ名",
+				"notice": "ASCII文字列",
+				"parameters": ["char", 40]
+			}
+		}
+	}
+}
