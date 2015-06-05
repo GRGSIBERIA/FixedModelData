@@ -1,0 +1,152 @@
+{
+	"TexturePath":
+	{
+		"comment": "テクスチャのファイルパス",
+		"extends": "FixedArrayList",
+		"parameters": ["wchar_t", "256"]
+	},
+	
+	"TextureList":
+	{
+		"comment": "テクスチャのリスト",
+		"extends": "ArrayList",
+		"parameters": ["TexturePath"]
+	},
+	
+	"SphereMapPath":
+	{
+		"comment": "スフィアマップのパス",
+		"extends": "FixedArrayList",
+		"parameters": ["wchar_t", "256"]
+	},
+	
+	"SphereMapList":
+	{
+		"comment": "スフィアマップのリスト",
+		"extends": "ArrayList",
+		"parameters": ["SphereMapPath"]
+	},
+	
+	"Material":
+	{
+		"comment": "マテリアル",
+		"variables":
+		{
+			"name":
+			{
+				"type": "FixedArrayList",
+				"comment": "マテリアル名",
+				"notice": "ASCII文字列",
+				"parameters": ["char", "40"]
+			},
+			"diffuseColor":
+			{
+				"type": "ColorRGBA",
+				"comment": "拡散色"
+			},
+			"specularColor":
+			{
+				"type": "ColorRGB",
+				"comment": "反射色"
+			},
+			"specularity":
+			{
+				"type": "float",
+				"comment": "反射係数"
+			},
+			"ambientColor":
+			{
+				"type": "ColorRGB",
+				"comment": "環境色"
+			},
+			"renderFlag":
+			{
+				"type": "flag",
+				"comment": "レンダリングの設定",
+				"enum": [
+					"BackFaceCulling", "ProjectionShadow", "UseShadowMap", "SelfShadow"
+				]
+			}
+		}
+	},
+	
+	"AssignedEdge":
+	{
+		"comment": "マテリアルにアサインされているエッジ",
+		"variables":
+		{
+			"edgeColor":
+			{
+				"type": "ColorRGB",
+				"comment": "エッジの描画色",
+				"notice": "処理系によっては不必要"
+			},
+			"edgeSize":
+			{
+				"type": "float",
+				"comment": "エッジの大きさ",
+				"notice": "処理系によっては不必要"
+			}
+		}
+	},
+	
+	"AssignedEdgeList":
+	{
+		"comment": "マテリアルにアサインされているエッジのリスト",
+		"extends": "ArrayList",
+		"parameters": ["AssignedEdge"]
+	},
+	
+	"AssignedTexture":
+	{
+		"comment": "マテリアルにアサインされているテクスチャ",
+		"variables":
+		{
+			"materialId":
+			{
+				"type": "int"
+			},
+			"textureId":
+			{
+				"type": "int"
+			}
+		}
+	},
+	
+	"AssignedTextureList":
+	{
+		"comment": "マテリアルにアサインされたテクスチャのリスト",
+		"extends": "ArrayList",
+		"parameters": ["AssignedTexture"]
+	},
+	
+	"AssignedSphereMap":
+	{
+		"comment": "マテリアルにアサインされているスフィアマップ",
+		"variables":
+		{
+			"materialId":
+			{
+				"type": "int"
+			},
+			"sphereId":
+			{
+				"type": "int"
+			},
+			"sphereMode":
+			{
+				"type": "enum",
+				"comment": "スフィアマップの動作",
+				"notice": "拡張子の種類に関わらず作動",
+				"enum": ["Disable", "Addition", "Subtraction"]
+			}
+		}
+	},
+	
+	"AssignedSphereMapList":
+	{
+		"comment": "マテリアルにアサインされたスフィアマップのリスト",
+		"extends": "ArrayList",
+		"parameters": ["AssignedSphereMap"]
+	}
+}

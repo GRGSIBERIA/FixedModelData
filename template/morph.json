@@ -19,6 +19,12 @@
 				"comment": "モーフ名",
 				"notice": "ASCII文字列",
 				"parameters": ["char", 40]
+			},
+			"morphPanel":
+			{
+				"type": "enum",
+				"comment": "MMD用のモーフ表示窓",
+				"enum": ["Eyebrow", "Eye", "Rip", "Other"]
 			}
 		}
 	},

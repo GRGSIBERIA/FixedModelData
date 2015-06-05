@@ -4,6 +4,50 @@
 		"comment": "チャンクのベースクラス，extends指定がなければデフォルトでこれを継承"
 	},
 	
+	"ColorRGBA":
+	{
+		"comment": "色クラス",
+		"variables":
+		{
+			"r":
+			{
+				"type": "char"
+			},
+			"g":
+			{
+				"type": "char"
+			},
+			"b":
+			{
+				"type": "char"
+			},
+			"a":
+			{
+				"type": "char"
+			}
+		}
+	},
+	
+	"ColorRGB":
+	{
+		"comment": "色クラス",
+		"variables":
+		{
+			"r":
+			{
+				"type": "char"
+			},
+			"g":
+			{
+				"type": "char"
+			},
+			"b":
+			{
+				"type": "char"
+			}
+		}
+	},
+	
 	"Vector4":
 	{
 		"comment": "4次元のベクトルクラス",
