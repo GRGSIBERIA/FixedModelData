@@ -1,0 +1,68 @@
+{
+	"Bone":
+	{
+		"variables":
+		{
+			"boneName":
+			{
+				"type": "FixedArrayList",
+				"parameters": ["char", 40],
+				"comment": "ボーンの名前",
+				"notice": "ASCIIコード，パディングは0詰め"
+			},
+			"position":
+			{
+				"type": "Vector3",
+				"comment": "ボーンの位置",
+				"notice": "Z手前，X右，Y上"
+			},
+			"parentId":
+			{
+				"type": "int",
+				"comment": "親ボーンのID",
+				"notice": "-1の場合は親なし"
+			},
+			"UnlockFlag":
+			{
+				"type": "flag",
+				"comment": "制御可能な方法",
+				"enum":
+				[
+					"Translate", "Rotate", "Scale", "Visible"
+				]
+			}
+		}
+	},
+	
+	"Weight":
+	{
+		"comment": "1頂点と1ボーンに対するウェイト",
+		"variables":
+		{
+			"boneId": 
+			{
+				"type": "int",
+				"comment": "ボーン番号"
+			},
+			"value":
+			{
+				"type": "float",
+				"comment": "ウェイト値"
+			}
+		}
+	},
+	
+	"WeightList":
+	{
+		"comment": "1頂点に対する複数のウェイトをまとめる",
+		"extends": "ArrayList",
+		"parameters": ["Weight"]
+	},
+	
+	"BoneWeight":
+	{
+		"comment": "頂点に対するボーンのウェイト値を格納する，サイズ頂点数と同じ",
+		"extends": "ArrayList",
+		"parameters": ["WeightList"]
+	}
+}

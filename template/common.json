@@ -1,4 +1,9 @@
 {
+	"ChunkBase":
+	{
+		"comment": "チャンクのベースクラス，extends指定がなければデフォルトでこれを継承"
+	},
+	
 	"Vector3":
 	{
 		"comment": "3次元のベクトルクラス",

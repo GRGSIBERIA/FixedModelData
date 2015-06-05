@@ -8,7 +8,7 @@
 			{
 				"type": "Vector3",
 				"comment": "頂点座標の位置",
-				"coordinate": "Z手前，X右，Y上"
+				"notice": "Z手前，X右，Y上"
 			}
 		}
 	},

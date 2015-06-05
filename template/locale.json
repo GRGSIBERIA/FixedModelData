@@ -1,0 +1,39 @@
+{
+	"Locale":
+	{
+		"comment": "訳",
+		"variables":
+		{
+			"name":
+			{
+				"type": "string",
+				"comment": "対象の訳",
+				"notice": "UTF-8"
+			}
+		}
+	},
+	
+	"LocaleList":
+	{
+		"extends": "ArrayList",
+		"parameters": ["Locale"],
+		"variables":
+		{
+			"localeType":
+			{
+				"type": "enum",
+				"comment": "訳の種類",
+				"enum":
+				[
+					"Material", "Bone", "RigidBody", "Joint"
+				]
+			},
+			"language":
+			{
+				"type": "FixedArrayList",
+				"parameters": ["char", 4],
+				"comment": "言語コード, ISO 639-1に準拠"
+			}
+		}
+	}
+}
