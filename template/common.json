@@ -90,12 +90,5 @@
 				"name": "NUM"
 			}
 		]
-	},
-	
-	"WString":
-	{
-		"comment": "UTF-8文字列",
-		"extends": "ArrayList",
-		"parameters": ["wchar_t"]
 	}
 }

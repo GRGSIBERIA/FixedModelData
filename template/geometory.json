@@ -13,25 +13,53 @@
 		}
 	},
 	
+	"Normal":
+	{
+		"comment": "法線を表すクラス",
+		"variables":
+		{
+			"direction":
+			{
+				"type": "Vector3",
+				"comment": "法線の向き",
+				"notice": "Z手前，X右，Y上，メートル法"
+			}
+		}
+	},
+	
+	"UV":
+	{
+		"comment": "UVを表すクラス",
+		"variables":
+		{
+			"coordinate":
+			{
+				"type": "Vector3",
+				"comment": "UV座標の位置",
+				"notice": "原点左下，0～1"
+			}
+		}
+	},
+	
 	"FaceVertex":
 	{
-		"comment": "三角形の頂点リスト",
+		"comment": "三角形の頂点リスト，頂点IDを指定",
 		"extends": "FixedArrayList",
 		"parameters": ["int", 3]
 	},
 	
 	"FaceNormal":
 	{
-		"comment": "面法線クラス，面の頂点ごとに法線を持つ",
+		"comment": "面法線クラス，面の頂点ごとに法線を持つ，法線IDを指定",
 		"extends": "FixedArrayList",
-		"parameters": ["float", 3]
+		"parameters": ["int", 3]
 	},
 	
 	"FaceUV":
 	{
-		"comment": "面UVクラス，面の頂点ごとにUVを持つ",
+		"comment": "面UVクラス，面の頂点ごとにUVを持つ，UVIDを指定",
 		"extends": "FixedArrayList",
-		"parameters": ["float", 3]
+		"parameters": ["int", 3]
 	},
 	
 	"Face":

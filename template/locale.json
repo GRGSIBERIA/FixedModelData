@@ -26,7 +26,7 @@
 				"comment": "訳の種類",
 				"enum":
 				[
-					"Material", "Bone", "Morph", "RigidBody", "Joint"
+					"Material", "Bone", "VertexMorph", "UVMorph", "BoneMorph", "RigidBody", "Joint"
 				]
 			},
 			"language":

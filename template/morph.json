@@ -1,5 +1,29 @@
 {
-	"MorphOffset":
+	"MorphList":
+	{
+		"comment": "モーフリストの基底クラス",
+		"extends": "ArrayList",
+		"template":
+		[
+			{
+				"type": "typename",
+				"name": "T"
+			}
+		],
+		"parameters": ["T"],
+		"variables":
+		{
+			"name":
+			{
+				"type": "FixedArrayList",
+				"comment": "モーフ名",
+				"notice": "ASCII文字列",
+				"parameters": ["char", 40]
+			}
+		}
+	},
+	
+	"VertexOffset":
 	{
 		"comment": "モーフの移動量を表す",
 		"variables":
@@ -19,20 +43,68 @@
 		}
 	},
 	
-	"Morph":
+	"VertexMorph":
 	{
-		"comment": "モーフ",
-		"extends": "ArrayList",
-		"parameters": ["MorphOffset"],
+		"comment": "頂点モーフ",
+		"extends": "MorphList",
+		"parameters": ["VertexOffset"]
+	},
+	
+	"UVOffset":
+	{
+		"comment": "UVモーフの移動量を表す",
 		"variables":
 		{
-			"name":
+			"uvId":
 			{
-				"type": "FixedArrayList",
-				"comment": "モーフ名",
-				"notice": "ASCII文字列",
-				"parameters": ["char", 40]
+				"type": "int",
+				"comment": "対象のUVのID"
+			},
+			"offset":
+			{
+				"type": "Vector2",
+				"comment": "UVの移動量",
+				"notice": "原点左下，0～1"
 			}
 		}
+	},
+	
+	"UVMorph":
+	{
+		"comment": "UVモーフ",
+		"extends": "MorphList",
+		"parameters": ["UVOffset"]
+	},
+	
+	"BoneOffset":
+	{
+		"comment": "ボーンモーフの移動量を表す",
+		"variables":
+		{
+			"boneId":
+			{
+				"type": "int",
+				"comment": "対象のボーンのID"
+			},
+			"offset":
+			{
+				"type": "Vector3",
+				"comment": "ボーンの移動量",
+				"notice": "Z手前，X右，Y上，メートル法"
+			},
+			"rotation":
+			{
+				"type": "Vector4",
+				"comment": "ボーンの回転",
+				"notice": "クォータニオン"
+			}
+		}
+	},
+	
+	"BoneMorph":
+	{
+		"comment": "ボーンモーフ",
+		"extends": "MorphList",
+		"parameters": ["BoneOffset"]
 	}
 }
