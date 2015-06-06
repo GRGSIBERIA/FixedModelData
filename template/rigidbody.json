@@ -1,0 +1,109 @@
+{
+	"Rigidbody":
+	{
+		"comment": "剛体を表現するクラス",
+		"variables":
+		{
+			"name":
+			{
+				"type": "FixedArrayList",
+				"parameters": ["char", 40],
+				"comment": "剛体名",
+				"notice": "ASCII文字列"
+			},
+			"boneId":
+			{
+				"type": "int",
+				"comment": "関連するボーンID"
+			},
+			"rigidbodyGroup":
+			{
+				"type": "int",
+				"comment": "剛体グループ",
+				"notice": "0～15まで"
+			},
+			"collisionGroup":
+			{
+				"type": "int",
+				"comment": "衝突剛体グループ",
+				"notice": "16ビットのフラグ，剛体グループ数とビット数が対応"
+			},
+			"shape":
+			{
+				"type": "enum",
+				"comment": "剛体の形状",
+				"enum":
+				[
+					"Sphere", "Box", "Capsule"
+				]
+			},
+			"size":
+			{
+				"type": "Vector3",
+				"comment": "剛体の大きさ",
+				"notice": "Sphere = (Radius), Box = (Width, Height, Depth), Capsule = (Radius, Height)"
+			},
+			"position":
+			{
+				"type": "Vector3",
+				"comment": "剛体の位置",
+				"notice": "Z手前，X右，Y上，メートル法"
+			},
+			"rotation":
+			{
+				"type": "Vector3",
+				"comment": "剛体の回転",
+				"notice": "単位はラジアン"
+			},
+			"mass":
+			{
+				"type": "float",
+				"comment": "質量",
+				"notice": "単位はkg"
+			},
+			"moveDamper":
+			{
+				"type": "float",
+				"comment": "移動減衰量"
+			},
+			"rotateDamper":
+			{
+				"type": "float",
+				"comment": "回転減衰量"
+			},
+			"moveDrag":
+			{
+				"type": "float",
+				"comment": "移動抗力"
+			},
+			"rotateDrag":
+			{
+				"type": "float",
+				"comment": "回転抗力"
+			},
+			"staticFriction":
+			{
+				"type": "float",
+				"comment": "静止摩擦係数"
+			},
+			"dynamicFriction":
+			{
+				"type": "float",
+				"comment": "動摩擦係数"
+			},
+			"behaviorType":
+			{
+				"type": "enum",
+				"comment": "剛体の挙動",
+				"enum": ["Static", "Dynamic", "FollowBone"]
+			}
+		}
+	},
+	
+	"RigidbodyList":
+	{
+		"comment": "剛体のリスト",
+		"extends": "ArrayList",
+		"parameters": ["Rigidbody"]
+	}
+}

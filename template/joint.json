@@ -1,0 +1,87 @@
+{
+	"Joint":
+	{
+		"comment": "ジョイント",
+		"notice": "バネ付き6DOF限定，ばねは移動に対する力",
+		"variables":
+		{
+			"name":
+			{
+				"type": "FixedArrayList",
+				"comment": "ジョイント名",
+				"parameters": ["char", 40]
+			},
+			"rigidbodyAId":
+			{
+				"type": "int",
+				"comment": "参照剛体A",
+				"notice": "-1の場合はなし"
+			},
+			"rigidbodyBId":
+			{
+				"type": "int",
+				"comment": "参照剛体B",
+				"notice": "参照している剛体が存在しない場合はエラーデータ"
+			},
+			"anchor":
+			{
+				"type": "Vector3",
+				"comment": "ジョイントの位置",
+				"notice": "Z手前，X右，Y上，メートル法"
+			},
+			"axis":
+			{
+				"type": "Vector3",
+				"comment": "ジョイントの向き，X軸が基準",
+				"notice": "非正規化ベクトルの場合は正規化する"
+			},
+			"linearLimit":
+			{
+				"type": "float",
+				"comment": "制限距離，XYZの移動量の制限"
+			},
+			"angularLimit":
+			{
+				"type": "Vector3",
+				"comment": "各軸の回転制限量",
+				"notice": "ラジアン，全て0以上，マイナスの場合は符号を変える"
+			},
+			"positionSpring":
+			{
+				"type": "Vector3",
+				"comment": "移動に対するばねの力"
+			},
+			"positionSpringDamper":
+			{
+				"type": "Vector3",
+				"comment": "移動に対するばねの減衰"
+			},
+			"rotateSpringX":
+			{
+				"type": "float",
+				"comment": "X軸の回転に対するばねの力"
+			},
+			"rotateSpringDamperX":
+			{
+				"type": "float",
+				"comment": "X軸の回転に対するばねの減衰"
+			},
+			"rotateSpringYZ":
+			{
+				"type": "float",
+				"comment": "YZ軸の回転に対するばねの力"
+			},
+			"rotateSpringDamperYZ":
+			{
+				"type": "float",
+				"comment": "YZ軸の回転に対するばねの減衰"
+			}
+		}
+	},
+	"JointList":
+	{
+		"comment": "ジョイントのリスト",
+		"extends": "ArrayList",
+		"parameters": ["Joint"]
+	}
+}

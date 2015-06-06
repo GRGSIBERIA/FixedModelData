@@ -13,20 +13,6 @@
 		"parameters": ["TexturePath"]
 	},
 	
-	"SphereMapPath":
-	{
-		"comment": "スフィアマップのパス",
-		"extends": "FixedArrayList",
-		"parameters": ["wchar_t", "256"]
-	},
-	
-	"SphereMapList":
-	{
-		"comment": "スフィアマップのリスト",
-		"extends": "ArrayList",
-		"parameters": ["SphereMapPath"]
-	},
-	
 	"Material":
 	{
 		"comment": "マテリアル",
@@ -75,6 +61,11 @@
 		"comment": "マテリアルにアサインされているエッジ",
 		"variables":
 		{
+			"materialId":
+			{
+				"type": "int",
+				"comment": "アサインしたいマテリアルのID"
+			},
 			"edgeColor":
 			{
 				"type": "ColorRGB",
@@ -104,11 +95,13 @@
 		{
 			"materialId":
 			{
-				"type": "int"
+				"type": "int",
+				"comment": "アサインしたいマテリアルのID"
 			},
 			"textureId":
 			{
-				"type": "int"
+				"type": "int",
+				"comment": "アサインするテクスチャのID"
 			}
 		}
 	},
@@ -123,16 +116,9 @@
 	"AssignedSphereMap":
 	{
 		"comment": "マテリアルにアサインされているスフィアマップ",
+		"extends": "AssignedTexture",
 		"variables":
 		{
-			"materialId":
-			{
-				"type": "int"
-			},
-			"sphereId":
-			{
-				"type": "int"
-			},
 			"sphereMode":
 			{
 				"type": "enum",
@@ -148,5 +134,31 @@
 		"comment": "マテリアルにアサインされたスフィアマップのリスト",
 		"extends": "ArrayList",
 		"parameters": ["AssignedSphereMap"]
+	},
+	
+	"AssignedNormalMap":
+	{
+		"comment": "マテリアルにアサインされているノーマルマップ",
+		"extends": "AssignedTexture"
+	},
+	
+	"AssignedNormalMapList":
+	{
+		"comment": "マテリアルにアサインされているノーマルマップのリスト",
+		"extends": ["ArrayList"],
+		"parameters": ["AssignedNormalMap"]
+	},
+	
+	"AssignedBumpMap":
+	{
+		"comment": "マテリアルにアサインされているバンプマップ",
+		"extends": "AssignedTexture"
+	},
+	
+	"AssignedBumpMapList":
+	{
+		"comment": "マテリアルにアサインされているバンプマップのリスト",
+		"extends": ["ArrayList"],
+		"parameters": ["AssignedBumpMap"]
 	}
 }
