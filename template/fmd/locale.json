@@ -1,7 +1,7 @@
 {
 	"Locale":
 	{
-		"comment": "訳",
+		"comment": "ある要素の訳",
 		"variables":
 		{
 			"name":
@@ -16,6 +16,8 @@
 	
 	"LocaleList":
 	{
+		"comment": "ある属性全ての訳",
+		"notice": "要素数は各属性の長さに依存",
 		"extends": "ArrayList",
 		"parameters": ["Locale"],
 		"variables":
@@ -26,15 +28,22 @@
 				"comment": "訳の種類",
 				"enum":
 				[
-					"Material", "Bone", "VertexMorph", "UVMorph", "BoneMorph", "RigidBody", "Joint"
+					"Material", "Bone", "VertexMorph", "UVMorph", "BoneMorph", "RigidBody", "Joint", "BoneWindow", "BoneDisplay"
 				]
 			},
 			"language":
 			{
 				"type": "FixedArrayList",
-				"parameters": ["char", 4],
+				"parameters": ["char", 2],
 				"comment": "言語コード, ISO 639-1に準拠"
 			}
 		}
+	},
+	
+	"LocaleListList":
+	{
+		"comment": "LocaleListのリスト",
+		"extends": "ArrayList",
+		"parameters": ["LocaleList"]
 	}
 }

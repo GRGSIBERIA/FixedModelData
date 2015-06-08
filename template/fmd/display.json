@@ -1,0 +1,41 @@
+{
+	"BoneWindow":
+	{
+		"comment": "表示枠名",
+		"notice": "具体的な枠名はlocaleにまとめる",
+		"variables":
+		{
+			"numberOfWindow":
+			{
+				"type": "int",
+				"comment": "ボーン窓の数"
+			}
+		}
+	},
+	
+	"BoneDisplay":
+	{
+		"comment": "ボーン枠",
+		"variables":
+		{
+			"windowId":
+			{
+				"type": "int",
+				"comment": "表示させたいボーン窓のID"
+			},
+			
+			"boneId":
+			{
+				"type": "int",
+				"comment": "表示するボーンのID"
+			}
+		}
+	},
+	
+	"BoneDisplayList":
+	{
+		"comment": "ボーン枠のリスト",
+		"extends": "ArrayList",
+		"parameters": ["BoneDisplay"]
+	}
+}

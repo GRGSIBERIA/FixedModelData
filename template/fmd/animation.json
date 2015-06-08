@@ -6,7 +6,7 @@
 			"name":
 			{
 				"type": "FixedArrayList",
-				"parameters": ["char", 40],
+				"parameters": ["string", 40],
 				"comment": "ボーンの名前",
 				"notice": "ASCIIコード，パディングは0詰め"
 			},
@@ -20,15 +20,39 @@
 			{
 				"type": "int",
 				"comment": "親ボーンのID",
-				"notice": "-1の場合は親なし"
+				"notice": "0より小さい値はなし"
 			},
-			"UnlockFlag":
+			"unlockFlag":
 			{
 				"type": "flag",
 				"comment": "制御可能な方法",
 				"enum":
 				[
 					"Translate", "Rotate", "Scale", "Visible"
+				]
+			},
+			"nodeType":
+			{
+				"type": "enum",
+				"comment": "どの部位のボーンかを表す",
+				"enum":
+				[
+					"Head", "Neck",
+					"Sholder", "Arm", "ArmRoll", "ForeArm", "ForeArmRoll", "Hand",
+					"Thumb", "IndexFinger", "MiddleFinger", "RingFinger", "LittleFinger",
+					"Spine",
+					"Hips",
+					"UpLeg", "UpLegRoll", "Leg", "LegRoll", "Foot", "Toe",
+					"Eyebrow", "Mouth", "Eye", "Cheek", "Jaw"
+				]
+			},
+			"directionType":
+			{
+				"type": "enum",
+				"comment": "nodeTypeに対して，どの方向のものかを表す",
+				"enum":
+				[
+					"None", "Left", "Right", "Upper", "Lower"
 				]
 			}
 		}

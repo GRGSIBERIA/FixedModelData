@@ -1,0 +1,50 @@
+{
+	"Header":
+	{
+		"comment": "ファイルのヘッダ情報",
+		"variables":
+		{
+			"format":
+			{
+				"type": "FixedArrayList",
+				"parameters": ["char", 3],
+				"comment": "フォーマット名",
+				"values": "fmd"
+			},
+			"version":
+			{
+				"type": "float",
+				"comment": "バージョン",
+				"values": 1.0
+			},
+			"digest":
+			{
+				"type": "FixedArray",
+				"comment": "ライセンス以降のモデルデータのMD5ダイジェスト",
+				"parameters": ["char", "32"],
+				"notice": "8バイト目から32バイト分あります"
+			},
+			"license":
+			{
+				"type": "ArrayList",
+				"parameters": ["wchar_t"],
+				"comment": "ライセンスの条文",
+				"notice": "UTF-8の文字列"
+			},
+			"author":
+			{
+				"type": "ArrayList",
+				"parameters": ["wchar_t"],
+				"comment": "モデルの作成者",
+				"notice": "UTF-8の文字列"
+			},
+			"comment":
+			{
+				"type": "ArrayList",
+				"parameters": ["wchar_t"],
+				"comment": "モデル作成者のコメント",
+				"notice": "UTF-8の文字列"
+			}
+		}
+	}
+}
