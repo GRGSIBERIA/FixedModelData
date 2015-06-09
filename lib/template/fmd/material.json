@@ -37,7 +37,7 @@
 			},
 			"specularity":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "反射係数"
 			},
 			"ambientColor":
@@ -47,7 +47,7 @@
 			},
 			"renderFlag":
 			{
-				"type": "flag",
+				"type": "Flag",
 				"comment": "レンダリングの設定",
 				"enum": [
 					"BackFaceCulling", "ProjectionShadow", "UseShadowMap", "SelfShadow"
@@ -63,7 +63,7 @@
 		{
 			"materialId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "アサインしたいマテリアルのID"
 			},
 			"edgeColor":
@@ -74,7 +74,7 @@
 			},
 			"edgeSize":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "エッジの大きさ",
 				"notice": "処理系によっては不必要"
 			}
@@ -95,12 +95,12 @@
 		{
 			"materialId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "アサインしたいマテリアルのID"
 			},
 			"textureId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "アサインするテクスチャのID"
 			}
 		}
@@ -121,7 +121,7 @@
 		{
 			"sphereMode":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "スフィアマップの動作",
 				"notice": "拡張子の種類に関わらず作動",
 				"enum": ["Disable", "Addition", "Subtraction"]

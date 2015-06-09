@@ -13,24 +13,24 @@
 			},
 			"boneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "関連するボーンID"
 			},
 			"rigidbodyGroup":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "剛体グループ",
 				"notice": "0～15まで"
 			},
 			"collisionGroup":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "衝突剛体グループ",
 				"notice": "16ビットのフラグ，剛体グループ数とビット数が対応"
 			},
 			"shape":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "剛体の形状",
 				"enum":
 				[
@@ -57,43 +57,43 @@
 			},
 			"mass":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "質量",
 				"notice": "単位はkg"
 			},
 			"moveDamper":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "移動減衰量"
 			},
 			"rotateDamper":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "回転減衰量"
 			},
 			"moveDrag":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "移動抗力"
 			},
 			"rotateDrag":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "回転抗力"
 			},
 			"staticFriction":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "静止摩擦係数"
 			},
 			"dynamicFriction":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "動摩擦係数"
 			},
 			"behaviorType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "剛体の挙動",
 				"enum": ["Static", "Dynamic", "FollowBone"]
 			}

@@ -7,7 +7,7 @@
 		{
 			"boneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "ローカル軸のあるボーンID"
 			},
 			"AxisX":
@@ -37,7 +37,7 @@
 		{
 			"limitType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "制限の種類",
 				"enum": ["Position", "Rotation", "Scale"]
 			},
@@ -70,22 +70,22 @@
 		{
 			"sourceBoneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "拘束するボーンのID"
 			},
 			"targetBoneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "拘束されるボーンのID"
 			},
 			"ratio":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "拘束をかける割合"
 			},
 			"constraintType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "拘束の種類",
 				"enum":
 				[
@@ -109,22 +109,22 @@
 		{
 			"rootBoneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "IKの根本のボーンID"
 			},
 			"tailBoneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "IKの末端のボーンID"
 			},
 			"iteration":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "計算回数"
 			},
 			"rotateLimitation":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "1フレームあたりに回転可能な角度",
 				"notice": "ラジアン角, 30FPS換算"
 			}

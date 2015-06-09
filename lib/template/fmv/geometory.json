@@ -1,0 +1,57 @@
+{
+	"Vertex":
+	{
+		"comment": "頂点情報",
+		"variables":
+		{
+			"position":
+			{
+				"type": "Vector3",
+				"comment": "座標"
+			},
+			"normal":
+			{
+				"type": "Vector3",
+				"comment": "法線"
+			},
+			"uv":
+			{
+				"type": "Vector2",
+				"comment": "UV座標"
+			},
+			"influencedBoneIds":
+			{
+				"type": "FixedArray",
+				"comment": "影響を受けるボーンID",
+				"parameters": ["Word", 2]
+			},
+			"boneWeights":
+			{
+				"type": "Byte",
+				"comment": "ボーンのウェイト値",
+				"notice": "0～100，ボーン2の影響度は100 - boneWeight"
+			},
+			"edgeFlag":
+			{
+				"type": "Byte",
+				"comment": "エッジフラグ",
+				"notice": "0が通常，1がエッジ無効"
+			}
+		}
+	},
+	
+	"VertexList":
+	{
+		"comment": "頂点リスト",
+		"extends": "ArrayList",
+		"parameters": ["Vertex"]
+	},
+	
+	"FaceVertexList":
+	{
+		"comment": "面頂点リスト",
+		"extends": "ArrayList",
+		"parameters": ["Word", "DWord"]
+	}
+	
+}

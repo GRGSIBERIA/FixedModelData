@@ -7,7 +7,7 @@
 		{
 			"numberOfWindow":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "ボーン窓の数"
 			}
 		}
@@ -20,13 +20,13 @@
 		{
 			"windowId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "表示させたいボーン窓のID"
 			},
 			
 			"boneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "表示するボーンのID"
 			}
 		}

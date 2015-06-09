@@ -1,0 +1,259 @@
+{
+	"ChunkBase":
+	{
+		"comment": "チャンクのベースクラス，extends指定がなければデフォルトでこれを継承"
+	},
+	
+	"ColorRGBA":
+	{
+		"comment": "アルファ付き色クラス",
+		"variables":
+		{
+			"r":
+			{
+				"type": "Char"
+			},
+			"g":
+			{
+				"type": "Char"
+			},
+			"b":
+			{
+				"type": "Char"
+			},
+			"a":
+			{
+				"type": "Char"
+			}
+		}
+	},
+	
+	"ColorRGB":
+	{
+		"comment": "色クラス",
+		"variables":
+		{
+			"r":
+			{
+				"type": "Char"
+			},
+			"g":
+			{
+				"type": "Char"
+			},
+			"b":
+			{
+				"type": "Char"
+			}
+		}
+	},
+	
+	"Vector4":
+	{
+		"comment": "4次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			},
+			"z":
+			{
+				"type": "Float"
+			},
+			"w":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"Vector3":
+	{
+		"comment": "3次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			},
+			"z":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"Vector2":
+	{
+		"comment": "2次元のベクトルクラス",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"Int":
+	{
+		"comment": "符号付き4バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "int"
+			}
+		}
+	},
+	
+	"Short":
+	{
+		"comment": "符号付き2バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "short"
+			}
+		}
+	},
+	
+	"Char":
+	{
+		"comment": "符号付き1バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "char"
+			}
+		}
+	},
+	
+	"Float":
+	{
+		"comment": "4バイト浮動小数点数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "float"
+			}
+		}
+	},
+	
+	"Byte":
+	{
+		"comment": "符号なし1バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "BYTE"
+			}
+		}
+	},
+	
+	"Word":
+	{
+		"comment": "符号なし2バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "WORD"
+			}
+		}
+	},
+	
+	"DWord":
+	{
+		"comment": "符号なし4バイト整数",
+		"variables":
+		{
+			"value":
+			{
+				"type": "DWORD"
+			}
+		}
+	},
+	
+	"Enum":
+	{
+		"comment": "列挙型",
+		"template":
+		{
+			"TYPE":
+			{
+				"type": "typename",
+				"comment": "列挙型の型",
+				"default": "Int"
+			}
+		}
+	},
+	
+	"Flag":
+	{
+		"comment": "フラグ型",
+		"template":
+		{
+			"TYPE":
+			{
+				"type": "typename",
+				"comment": "フラグ型の型",
+				"default": "Int"
+			}
+		}
+	},
+	
+	"ArrayList":
+	{
+		"comment": "配列要素クラス",
+		"template":
+		{
+			"T":
+			{
+				"type": "typename",
+				"comment": "配列の型"
+			},
+			"NUM_TYPE": 
+			{
+				"type": "typename",
+				"default": "Int",
+				"comment": "配列の長さの型"
+			}
+		}
+	},
+	
+	"FixedArrayList":
+	{
+		"comment": "固定長配列要素クラス",
+		"template":
+		{
+			"T": 
+			{
+				"type": "typename",
+				"comment": "配列の型"
+			},
+			"NUM":
+			{
+				"type": "int",
+				"comment": "要素数"
+			}
+		}
+	}
+}

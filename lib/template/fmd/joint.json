@@ -13,13 +13,13 @@
 			},
 			"rigidbodyAId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "参照剛体A",
 				"notice": "-1の場合はなし"
 			},
 			"rigidbodyBId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "参照剛体B",
 				"notice": "参照している剛体が存在しない場合はエラーデータ"
 			},
@@ -37,7 +37,7 @@
 			},
 			"linearLimit":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "制限距離，XYZの移動量の制限"
 			},
 			"angularLimit":
@@ -58,22 +58,22 @@
 			},
 			"rotateSpringX":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "X軸の回転に対するばねの力"
 			},
 			"rotateSpringDamperX":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "X軸の回転に対するばねの減衰"
 			},
 			"rotateSpringYZ":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "YZ軸の回転に対するばねの力"
 			},
 			"rotateSpringDamperYZ":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "YZ軸の回転に対するばねの減衰"
 			}
 		}

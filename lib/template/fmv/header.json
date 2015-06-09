@@ -1,0 +1,36 @@
+{
+	"Header":
+	{
+		"comment": "ヘッダ情報",
+		"variables":
+		{
+			"magic":
+			{
+				"type": "FixedArray",
+				"comment": "拡張子名",
+				"parameters": ["char", 3],
+				"values": "Pmd"
+			},
+			"version":
+			{
+				"type": "float",
+				"comment": "フォーマットバージョン",
+				"values": 1.0
+			},
+			"modelName":
+			{
+				"type": "FixedArray",
+				"comment": "モデル名",
+				"notice": "SJISコード，終端0x00，パディング0xFD",
+				"parameters": ["char", 20]
+			},
+			"comment":
+			{
+				"type": "FixedArray",
+				"comment": "コメント",
+				"notice": "SJISコード，終端0x00，パディング0xFD",
+				"parameters": ["char", 256]
+			}
+		}
+	}
+}

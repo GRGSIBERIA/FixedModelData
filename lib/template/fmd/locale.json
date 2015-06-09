@@ -24,7 +24,7 @@
 		{
 			"localeType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "訳の種類",
 				"enum":
 				[

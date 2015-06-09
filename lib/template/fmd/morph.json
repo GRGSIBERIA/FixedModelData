@@ -22,7 +22,7 @@
 			},
 			"morphPanel":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "MMD用のモーフ表示窓",
 				"enum": ["Eyebrow", "Eye", "Rip", "Other"]
 			}
@@ -36,7 +36,7 @@
 		{
 			"vertexId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "対象の頂点ID"
 			},
 			
@@ -63,7 +63,7 @@
 		{
 			"uvId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "対象のUVのID"
 			},
 			"offset":
@@ -89,7 +89,7 @@
 		{
 			"boneId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "対象のボーンのID"
 			},
 			"offset":

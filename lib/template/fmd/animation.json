@@ -1,6 +1,7 @@
 {
 	"Bone":
 	{
+		"comment": "ボーン情報",
 		"variables":
 		{
 			"name":
@@ -18,13 +19,13 @@
 			},
 			"parentId":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "親ボーンのID",
 				"notice": "0より小さい値はなし"
 			},
 			"unlockFlag":
 			{
-				"type": "flag",
+				"type": "Flag",
 				"comment": "制御可能な方法",
 				"enum":
 				[
@@ -33,7 +34,7 @@
 			},
 			"nodeType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "どの部位のボーンかを表す",
 				"enum":
 				[
@@ -48,7 +49,7 @@
 			},
 			"directionType":
 			{
-				"type": "enum",
+				"type": "Enum",
 				"comment": "nodeTypeに対して，どの方向のものかを表す",
 				"enum":
 				[
@@ -65,12 +66,12 @@
 		{
 			"boneId": 
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "ボーン番号"
 			},
 			"value":
 			{
-				"type": "float",
+				"type": "Float",
 				"comment": "ウェイト値"
 			}
 		}
@@ -92,7 +93,7 @@
 		{
 			"numberOfInfluences":
 			{
-				"type": "int",
+				"type": "Int",
 				"comment": "影響ボーン数，全て同じ数になる"
 			}
 		}
