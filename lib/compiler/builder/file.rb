@@ -16,7 +16,7 @@ module Filer
 	end
 
 	def CreateFiles(jsons, build_language, type)
-		basis = "./compiler/builder/#{build_language}"
+		basis = "./#{build_language}"
 		common = "#{basis}/common.json"
 
 		if not Dir::exists?("#{basis}/#{type}") then
