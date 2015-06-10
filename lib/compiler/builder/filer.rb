@@ -3,16 +3,19 @@
 module Filer
 	extend self
 
-	def OpenJsons(type, ext)
+	def JsonPathes(type, ext)
 		jsons = Dir::open("./template/#{type}").entries[2..-1]
+
+		retval = []
+
 		for i in 0...jsons.size
 			# ライセンスだけは拡張子そのまま
 			if jsons[i] != "license.txt" then
-				jsons[i] = jsons[i].split(".")[0] + ".#{ext}"
+				retval << jsons[i].split(".")[0] + ".#{ext}"
 			end
 		end
 
-		jsons << "common.#{ext}"
+		retval << "common.#{ext}"
 	end
 
 	def CreateFiles(jsons, build_language, type)
