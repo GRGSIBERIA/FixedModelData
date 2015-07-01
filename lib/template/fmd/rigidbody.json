@@ -39,21 +39,19 @@
 			},
 			"size":
 			{
-				"type": "Vector3",
+				"type": "UnitVector3",
 				"comment": "剛体の大きさ",
 				"notice": "Sphere = (Radius), Box = (Width, Height, Depth), Capsule = (Radius, Height)"
 			},
 			"position":
 			{
-				"type": "Vector3",
-				"comment": "剛体の位置",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "剛体の位置"
 			},
 			"rotation":
 			{
-				"type": "Vector3",
-				"comment": "剛体の回転",
-				"notice": "単位はラジアン"
+				"type": "Quaternion",
+				"comment": "剛体の回転"
 			},
 			"mass":
 			{

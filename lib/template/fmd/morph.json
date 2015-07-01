@@ -42,9 +42,8 @@
 			
 			"offset":
 			{
-				"type": "Vector3",
-				"comment": "移動量",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "移動量"
 			}
 		}
 	},
@@ -68,7 +67,7 @@
 			},
 			"offset":
 			{
-				"type": "Vector2",
+				"type": "UnitVector2",
 				"comment": "UVの移動量",
 				"notice": "原点左下，0～1"
 			}
@@ -94,13 +93,13 @@
 			},
 			"offset":
 			{
-				"type": "Vector3",
+				"type": "UnitVector3",
 				"comment": "ボーンの移動量",
 				"notice": "Z手前，X右，Y上，メートル法"
 			},
 			"rotation":
 			{
-				"type": "Vector4",
+				"type": "Quaternion",
 				"comment": "ボーンの回転",
 				"notice": "クォータニオン"
 			}

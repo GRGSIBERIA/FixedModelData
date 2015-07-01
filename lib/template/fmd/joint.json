@@ -25,7 +25,7 @@
 			},
 			"anchor":
 			{
-				"type": "Vector3",
+				"type": "UnitVector3",
 				"comment": "ジョイントの位置",
 				"notice": "Z手前，X右，Y上，メートル法"
 			},
@@ -42,7 +42,7 @@
 			},
 			"angularLimit":
 			{
-				"type": "Vector3",
+				"type": "Radian",
 				"comment": "各軸の回転制限量",
 				"notice": "ラジアン，全て0以上，マイナスの場合は符号を変える"
 			},

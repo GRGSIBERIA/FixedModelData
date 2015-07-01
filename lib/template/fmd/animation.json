@@ -13,9 +13,8 @@
 			},
 			"position":
 			{
-				"type": "Vector3",
-				"comment": "ボーンの位置",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "ボーンの位置"
 			},
 			"parentId":
 			{

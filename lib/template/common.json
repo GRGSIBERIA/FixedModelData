@@ -108,6 +108,88 @@
 		}
 	},
 	
+	"UnitVector3":
+	{
+		"comment": "単位化された3次元のベクトルクラス",
+		"notice": "Z手前，X右，Y上，メートル法",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			},
+			"z":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"Radian":
+	{
+		"comment": "ラジアン角",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			},
+			"z":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"Quaternion":
+	{
+		"comment": "四元数",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			},
+			"z":
+			{
+				"type": "Float"
+			},
+			"w":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
+	"UnitVector2":
+	{
+		"comment": "単位化された2次元のベクトルクラス",
+		"notice": "原点左下，0～1",
+		"variables":
+		{
+			"x":
+			{
+				"type": "Float"
+			},
+			"y":
+			{
+				"type": "Float"
+			}
+		}
+	},
+	
 	"Int":
 	{
 		"comment": "符号付き4バイト整数",

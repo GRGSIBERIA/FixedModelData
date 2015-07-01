@@ -6,9 +6,8 @@
 		{
 			"position":
 			{
-				"type": "Vector3",
-				"comment": "頂点座標の位置",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "頂点座標の位置"
 			}
 		}
 	},
@@ -20,9 +19,8 @@
 		{
 			"direction":
 			{
-				"type": "Vector3",
-				"comment": "法線の向き",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "法線の向き"
 			}
 		}
 	},
@@ -34,9 +32,8 @@
 		{
 			"coordinate":
 			{
-				"type": "Vector3",
-				"comment": "UV座標の位置",
-				"notice": "原点左下，0～1"
+				"type": "UnitVector2",
+				"comment": "UV座標の位置"
 			}
 		}
 	},

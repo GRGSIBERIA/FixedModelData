@@ -43,15 +43,13 @@
 			},
 			"maxLimit":
 			{
-				"type": "Vector3",
-				"comment": "最大の制限値，limitTypeによって意味は変わる",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "最大の制限値，limitTypeによって意味は変わる"
 			},
 			"minLimit":
 			{
-				"type": "Vector3",
-				"comment": "最小の制限値，limitTypeによって意味は変わる",
-				"notice": "Z手前，X右，Y上，メートル法"
+				"type": "UnitVector3",
+				"comment": "最小の制限値，limitTypeによって意味は変わる"
 			}
 		}
 	},
