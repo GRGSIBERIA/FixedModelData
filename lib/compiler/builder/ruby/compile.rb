@@ -1,10 +1,11 @@
 #-*- encoding: utf-8
-require "./compiler/builder/json_filer.rb"
+require "./compiler/builder/compiler_base.rb"
 
 class RubyCompiler
 
-	def compile
-		filer = JSONFiler.new("fmd", "ruby", "rb")
-		files = filer.created_files
+	def initialize
+		fmd = CompilerBase.new("fmd", "ruby", "rb")
+
+		puts fmd.files
 	end
 end

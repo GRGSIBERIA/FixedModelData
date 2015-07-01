@@ -2,25 +2,6 @@
 
 class JSONFiler
 	
-	def initialize(type, build_language, ext)
-		@type = type
-		@build_language = build_language
-		@ext = ext
-		
-		@jsons = CreateFiles
-		@files = CreateFiles
-	end
-	
-	# JSONのパスを取得
-	def json_pathes
-		@jsons
-	end
-	
-	# 自動生成されたファイルを取得
-	def created_files
-		@files
-	end
-
 	def JsonPathes
 		jsons = Dir::open("./template/#{@type}").entries[2..-1]
 
@@ -51,6 +32,27 @@ class JSONFiler
 		end
 		files << File.open("#{basis}/" + @jsons[-1], "w")
 	end
+
+	def initialize(type, build_language, ext)
+		@type = type
+		@build_language = build_language
+		@ext = ext
+		
+		@jsons = JsonPathes()
+		@files = CreateFiles()
+	end
+	
+	# JSONのパスを取得
+	def json_pathes
+		@jsons
+	end
+	
+	# 自動生成されたファイルを取得
+	def created_files
+		@files
+	end
+
+	
 	
 	
 end
