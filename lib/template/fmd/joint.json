@@ -26,7 +26,7 @@
 			"anchor":
 			{
 				"type": "UnitVector3",
-				"comment": "ジョイントの位置",
+				"comment": "ジョイントの位置，絶対座標",
 				"notice": "Z手前，X右，Y上，メートル法"
 			},
 			"axis":
